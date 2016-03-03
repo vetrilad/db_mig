@@ -1,0 +1,20 @@
+---
+applications:
+  ".":
+    name: db_mig
+    framework:
+      name: standalone
+      info:
+        mem: 64M
+        description: Standalone Application
+        exec: 
+    runtime: ruby21
+    command: ruby main.rb
+    url: 
+    mem: 128M
+    instances: 1
+    services:
+      winback-selfserve-redis-20150511:
+        type: redis
+      winback-mysql-database:
+        type: mysql
